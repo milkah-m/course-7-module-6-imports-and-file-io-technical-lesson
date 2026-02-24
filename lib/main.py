@@ -3,6 +3,21 @@
 import argparse
 from logger import log_action, search_logs
 
+# If you run `python lib/main.py`, you should see a list of the commands you can run:
+# * log
+# * search
+
+# Try running these in the terminal, such as:
+# `python lib/main.py log "testing code"`
+# `python lib/main.py log "deploying code"`
+# `python lib/main.py log "patching code"`
+
+# If you search for 'code'you should see all of these printed to the terminal:
+# `python lib/main.py search "code"`
+
+# If you search for 'deploying' or 'testing' however, you will only see the one that includes that word.
+
+# You should also be able to view your logs in `data/user_logs.txt`
 def main():
     parser = argparse.ArgumentParser(description="User Log Management CLI")
     subparsers = parser.add_subparsers(dest="command", help="Available commands")
@@ -26,3 +41,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# git checkout -b feature-logging-system
